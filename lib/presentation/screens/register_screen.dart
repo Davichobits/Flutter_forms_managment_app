@@ -25,13 +25,16 @@ class _RegisterView extends StatelessWidget {
         padding: EdgeInsets.symmetric(horizontal: 10),
         child: SingleChildScrollView(
           child: Column(
-            // mainAxisAlignment: MainAxisAlignment.end,
-            children: [
-              FlutterLogo(size: 100,),
-              _RegisterForm(),            
-              SizedBox(height: 20,),
-            ]
-          ),
+              // mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                FlutterLogo(
+                  size: 100,
+                ),
+                _RegisterForm(),
+                SizedBox(
+                  height: 20,
+                ),
+              ]),
         ),
       ),
     );
@@ -46,12 +49,21 @@ class _RegisterForm extends StatelessWidget {
     return Form(
       child: Column(
         children: [
-          const CustomTextFormField(),
-          const SizedBox(height: 20,),
-          const CustomTextFormField(),
-          const SizedBox(height: 20,),
+          const CustomTextFormField(
+            label: 'Usuario',
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const CustomTextFormField(
+            label: 'Contraseña',
+            obscureText: true
+          ),
+          const SizedBox(
+            height: 20,
+          ),
           FilledButton.tonalIcon(
-            onPressed: (){}, 
+            onPressed: () {},
             icon: const Icon(Icons.save),
             label: const Text('Crear usuario'),
           ),
